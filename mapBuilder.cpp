@@ -34,4 +34,3 @@ void MapBuilder::drawMap(int y, int x, chtype symbol) {
     }
 
 }
-

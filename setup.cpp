@@ -10,8 +10,10 @@ Setup::Setup() {
 	curs_set(0); 
 
 	if (!has_colors || !can_change_color) { 
+
 		endCurses();	
 		std::cout << "Your terminal doesnt support colors.\n";
+
 	}
 
 	start_color(); 

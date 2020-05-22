@@ -5,16 +5,16 @@
 Setup::Setup() {
 
 	initscr();
-	noecho(); //Disables echoing.
-	keypad(stdscr, TRUE); //Enables keypad.
-	curs_set(0); //Disables cursor.
+	noecho(); 
+	keypad(stdscr, TRUE); 
+	curs_set(0); 
 
-	if (!has_colors || !can_change_color) { //Checks for color support
+	if (!has_colors || !can_change_color) { 
 		endCurses();	
 		std::cout << "Your terminal doesnt support colors.\n";
 	}
 
-	start_color(); //Enables colors.
+	start_color(); 
 	return;
 
 }

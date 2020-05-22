@@ -2,18 +2,21 @@
 #include <unistd.h>
 #include <string>
 #include "timer.h"
+#include "game.h"
 
-void Timer::startCount() {
+int Timer::startCount() {
 
-	sleep(1); //removes glitches
-	WINDOW *timerWin;
+	sleep(3); //removes glitches
+
 	int mins = 0;
 	int hours = 0;	
 	int y, x;
 	
 	getmaxyx(stdscr, y, x);
 
-	timerWin = newwin(2, 7, (y / 2) - 6, (x / 2) - 2);
+	WINDOW *timerWin;
+
+	timerWin = newwin(1, 7, (y / 2) - 6, (x / 2) - 2);
 
 	for (int i = 0; i < 6; i++) {
 
@@ -28,6 +31,16 @@ void Timer::startCount() {
 			sleep(1);
 			mins++;
 
+            switch (gameStatus) {
+
+                case 0:
+                    return 0;
+
+                case 1:
+                    return 1;
+
+            }
+
 		}
 
 		mins = 0;
@@ -36,5 +49,7 @@ void Timer::startCount() {
 	}
 
 	delwin(timerWin);
+
+    return 0;
 
 }

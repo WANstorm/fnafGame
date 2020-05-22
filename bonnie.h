@@ -4,7 +4,7 @@
 class Bonnie {
 
 	public:
-		void activate(int level);
+		int activate(int level);
 };
 
 #endif

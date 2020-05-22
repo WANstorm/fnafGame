@@ -4,7 +4,7 @@
 class Timer {
 
 	public:
-		void startCount();
+		int startCount();
 
 };
 

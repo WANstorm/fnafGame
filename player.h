@@ -3,7 +3,7 @@
 
 class Player {
 
-	public:
+    protected:
 		bool moveOk(int y, int x);
 };
 

@@ -23,7 +23,7 @@ int Game::getInput(int y, int x) {
     Bonnie bonnie;
     Battery battery;
 
-	int input;
+    int input;
     int xCamPos = x, yCamPos = y - 2;
 
     std::ifstream readSave("night.save");
